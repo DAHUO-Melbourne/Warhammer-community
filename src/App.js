@@ -1,13 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import {Header, LogoImage} from './style';
+import {Header, LogoImage, Sociallink, Socialicon, Navlink} from './style';
+//import {Icon} from 'antd';
+import { createFromIconfontCN } from '@ant-design/icons';
 
-function App() {
+function App() {  
+  const IconFont = createFromIconfontCN({scriptUrl: '//at.alicdn.com/t/font_1671526_td7nvqrzkch.js',});
   return (
     <div className="App">
       <Header>
+        <Sociallink>
+          <Socialicon src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png"/>
+          <Socialicon src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Twitter-512.png"/>
+        </Sociallink>
         <LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" />
+        <Navlink>
+          <IconFont type='icon-daohang' style={{display:'block'}}/>
+        </Navlink>
       </Header>
       <Carousel>
         <Carousel.Item>
