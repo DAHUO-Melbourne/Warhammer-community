@@ -1,12 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import {Header} from './style';
+import {Header, LogoImage} from './style';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header>
+        <LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" />
+      </Header>
       <Carousel>
         <Carousel.Item>
           <img
