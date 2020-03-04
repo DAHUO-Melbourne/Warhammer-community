@@ -1,11 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
+import {Header} from './style';
 
 function App() {
   return (
     <div className="App">
-      
+      <Header />
       <Carousel>
         <Carousel.Item>
           <img
