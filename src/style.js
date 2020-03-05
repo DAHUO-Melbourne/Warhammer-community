@@ -41,5 +41,25 @@ export const Navlink = styled.div`
     right: 20px;
     background-color: transparent;
     transform:translate(0%, -50%);
-
 `
+
+export const Navbar = styled.div`
+    .Nav1 {
+        top:0;
+        right:0;
+        background-color: black;
+        width:200px;
+        height: 100%;
+        display: none;
+        position: fixed;
+    }
+    .Nav2 {
+        top:0;
+        right:0;
+        background-color: blue;
+        width:200px;
+        height: 100%;
+        display: none;
+        position: fixed;
+    }
+`;

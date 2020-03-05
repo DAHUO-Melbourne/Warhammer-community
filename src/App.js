@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import {Header, LogoImage, Sociallink, Socialicon, Navlink} from './style';
-//import {Icon} from 'antd';
+import {Header, LogoImage, Sociallink, Socialicon, Navlink, Navbar} from './style';
 import { createFromIconfontCN } from '@ant-design/icons';
 
 const IconFont = createFromIconfontCN({scriptUrl: '//at.alicdn.com/t/font_1671526_td7nvqrzkch.js',});
@@ -11,6 +10,7 @@ class App extends Component {
 
   constructor(props){
     super(props);
+    this.wrapperRef = React.createRef();
     this.state={
       style: {
         display:'block',
@@ -56,6 +56,7 @@ class App extends Component {
           <IconFont type='icon-daohang' style={this.state.style} onMouseEnter={this.handleMouseEnter.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}/>
         </Navlink>
       </Header>
+
       <Carousel>
         <Carousel.Item>
           <img
@@ -90,7 +91,6 @@ class App extends Component {
             <p>Before Elves, before Dwarfs, before Men, the Old Ones arrived upon this world. Then came Chaos and the Great Plan of the Old Ones was unmade. We are the last of their servants, and only by our hand shall the Great Plan be restored, with the total defeat of the usurping younger races.</p>
           </Carousel.Caption>
         </Carousel.Item>
-
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -102,7 +102,6 @@ class App extends Component {
             <p>If they shall not bow to me, the rightful ruler of Ulthuan, then I shall see each tower crumble and every soul scourged in pain until they beg for my rule.</p>
           </Carousel.Caption>
         </Carousel.Item>
-
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -114,8 +113,11 @@ class App extends Component {
             <p>All decent folk find the common rat repulsive. Harbinger of disease, it scavenges on our waste-heaps and frightens our children. How immeasurably worse then is the foul Skaven - standing on its hindlegs in foul parody of a human. Rats as tall as man, and blessed with the most vile intellect and cunning. They are the dark side of our souls, come to destroy us for our sins.</p>
           </Carousel.Caption>
         </Carousel.Item>
-
       </Carousel>
+
+      <Navbar ref={this.wrapperRef}>
+        <div className='Nav2'></div>
+      </Navbar>
     </div>
   );
   }
