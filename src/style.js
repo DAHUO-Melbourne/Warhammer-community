@@ -50,10 +50,10 @@ export const Navbar = styled.div`
         background-color: black;
         width:200px;
         height: 100%;
-        display: flex;
+        display: block;
         position: fixed;
         transition: margin .5s;
-        margin: 0 -200px 0 0
+        margin: 0 -200px 0 0;
     }
     .Nav1.is-nav-open {
         margin-right:0

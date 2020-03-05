@@ -15,8 +15,9 @@ class App extends Component {
       style: {
         display:'block',
         fontSize: '30px', 
-        marginRight:'15px',
-        color: 'black',
+        margin:'0 15px 0 0',
+        color: 'white',
+        transition: 'margin .5s',
       }
     }
   }  
@@ -26,8 +27,9 @@ class App extends Component {
       style: {
         display:'block',
         fontSize: '30px', 
-        marginRight:'15px',
+        margin:'0 15px 0 0',
         color: 'blue',
+        transition: 'margin .5s',
       }
     }))
   }
@@ -37,8 +39,9 @@ class App extends Component {
       style: {
         display:'block',
         fontSize: '30px', 
-        marginRight:'15px',
-        color: 'black',
+        margin:'0 15px 0 0',
+        color: 'white',
+        transition: 'margin .5s',
       }
     }))
   }
@@ -121,7 +124,13 @@ class App extends Component {
       </Carousel>
 
       <Navbar>
-        <div  ref={this.wrapperRef} className='Nav1'></div>
+        <div  ref={this.wrapperRef} className='Nav1'>
+          <div style={{textAlign:'center', color: 'white', marginTop:'10px', marginBottom:'10px'}}>Empire</div>
+          <div style={{textAlign:'center', color: 'white', marginTop:'10px', marginBottom:'10px'}}>High Elves</div>
+          <div style={{textAlign:'center', color: 'white', marginTop:'10px', marginBottom:'10px'}}>Lizardmen</div>
+          <div style={{textAlign:'center', color: 'white', marginTop:'10px', marginBottom:'10px'}}>Dark Elves</div>
+          <div style={{textAlign:'center', color: 'white', marginTop:'10px', marginBottom:'10px'}}>Skavens</div>
+        </div>
       </Navbar>
     </div>
   );
