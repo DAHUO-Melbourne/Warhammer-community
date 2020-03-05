@@ -43,6 +43,11 @@ class App extends Component {
     }))
   }
 
+  handleClick(){
+    const wrapper = this.wrapperRef.current;
+    wrapper.classList.toggle('is-nav-open')
+  }
+
   render(){
   return (
     <div className="App">
@@ -53,7 +58,7 @@ class App extends Component {
         </Sociallink>
         <LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" />
         <Navlink>
-          <IconFont type='icon-daohang' style={this.state.style} onMouseEnter={this.handleMouseEnter.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}/>
+          <IconFont type='icon-daohang' style={this.state.style} onClick={this.handleClick.bind(this)} onMouseEnter={this.handleMouseEnter.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}/>
         </Navlink>
       </Header>
 
@@ -115,8 +120,8 @@ class App extends Component {
         </Carousel.Item>
       </Carousel>
 
-      <Navbar ref={this.wrapperRef}>
-        <div className='Nav2'></div>
+      <Navbar>
+        <div  ref={this.wrapperRef} className='Nav1'></div>
       </Navbar>
     </div>
   );
