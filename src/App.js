@@ -1,12 +1,49 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import {Header, LogoImage, Sociallink, Socialicon, Navlink} from './style';
 //import {Icon} from 'antd';
 import { createFromIconfontCN } from '@ant-design/icons';
 
-function App() {  
-  const IconFont = createFromIconfontCN({scriptUrl: '//at.alicdn.com/t/font_1671526_td7nvqrzkch.js',});
+const IconFont = createFromIconfontCN({scriptUrl: '//at.alicdn.com/t/font_1671526_td7nvqrzkch.js',});
+
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state={
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        marginRight:'15px',
+        color: 'black',
+      }
+    }
+  }  
+
+  handleMouseEnter(){
+    this.setState(()=>({
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        marginRight:'15px',
+        color: 'blue',
+      }
+    }))
+  }
+
+  handleMouseLeave(){
+    this.setState(()=>({
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        marginRight:'15px',
+        color: 'black',
+      }
+    }))
+  }
+
+  render(){
   return (
     <div className="App">
       <Header>
@@ -16,7 +53,7 @@ function App() {
         </Sociallink>
         <LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" />
         <Navlink>
-          <IconFont type='icon-daohang' style={{display:'block'}}/>
+          <IconFont type='icon-daohang' style={this.state.style} onMouseEnter={this.handleMouseEnter.bind(this)} onMouseLeave={this.handleMouseLeave.bind(this)}/>
         </Navlink>
       </Header>
       <Carousel>
@@ -81,6 +118,7 @@ function App() {
       </Carousel>
     </div>
   );
+  }
 }
 
 export default App;
