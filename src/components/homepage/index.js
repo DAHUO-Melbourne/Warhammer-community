@@ -3,7 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import {Redirectbutton} from './style';
 import {Link} from 'react-router-dom';
+import Details from '../details';
 class Homepage extends Component{
+  handleClick(){
+//    alert('LLL');
+    this.props.history.push({ pathname : '/user' ,query : { day: 'Friday'} })
+  }
   render(){
   return (
     <div className="App">
@@ -17,7 +22,7 @@ class Homepage extends Component{
         <Carousel.Caption>
           <h3>Welcome to War Hammer World!</h3>
           <p>Ah mighty Sigmar, saviour of the Empire, give me strength!</p>
-          <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
+          <Link to={{pathname:'/details', title:'Good', content:'Better and better'}}><Redirectbutton onClick={this.handleClick.bind(this)}>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
