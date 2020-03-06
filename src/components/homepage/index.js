@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import {Redirectbutton} from './style';
+import {Link} from 'react-router-dom';
 class Homepage extends Component{
   render(){
   return (
@@ -16,7 +17,7 @@ class Homepage extends Component{
         <Carousel.Caption>
           <h3>Welcome to War Hammer World!</h3>
           <p>Ah mighty Sigmar, saviour of the Empire, give me strength!</p>
-          <Redirectbutton>Click to join us</Redirectbutton>
+          <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -28,7 +29,7 @@ class Homepage extends Component{
         <Carousel.Caption>
           <h3>High Elves</h3>
           <p>We are the chosen of Asuryan, beloved of the gods and heirs to the world. </p>
-          <Redirectbutton>Click to join us</Redirectbutton>
+          <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
         </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -40,7 +41,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Lizardmen</h3>
             <p>Before Elves, before Dwarfs, before Men, the Old Ones arrived upon this world. Then came Chaos and the Great Plan of the Old Ones was unmade. We are the last of their servants, and only by our hand shall the Great Plan be restored, with the total defeat of the usurping younger races.</p>
-            <Redirectbutton>Click to join us</Redirectbutton>
+            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -52,7 +53,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Dark Elves</h3>
             <p>If they shall not bow to me, the rightful ruler of Ulthuan, then I shall see each tower crumble and every soul scourged in pain until they beg for my rule.</p>
-            <Redirectbutton>Click to join us</Redirectbutton>
+            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -64,7 +65,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Skavens</h3>
             <p>All decent folk find the common rat repulsive. Harbinger of disease, it scavenges on our waste-heaps and frightens our children. How immeasurably worse then is the foul Skaven - standing on its hindlegs in foul parody of a human. Rats as tall as man, and blessed with the most vile intellect and cunning. They are the dark side of our souls, come to destroy us for our sins.</p>
-            <Redirectbutton>Click to join us</Redirectbutton>
+            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
