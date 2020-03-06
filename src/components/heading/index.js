@@ -3,15 +3,56 @@ import {Header, LogoImage, Sociallink, Socialicon, Navlink, Navbar} from './styl
 import { createFromIconfontCN } from '@ant-design/icons';
 const IconFont = createFromIconfontCN({scriptUrl: '//at.alicdn.com/t/font_1671526_td7nvqrzkch.js',});
 class Heading extends Component{
+  constructor(props){
+    super(props);
+    this.wrapperRef = React.createRef();
+    this.state={
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        margin:'0 15px 0 0',
+        color: 'white',
+        transition: 'margin .5s',
+      }
+    }
+  }
+  handleMouseEnter(){
+    this.setState(()=>({
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        margin:'0 15px 0 0',
+        color: 'blue',
+        transition: 'margin .5s',
+      }
+    }))
+  }
+
+  handleMouseLeave(){
+    this.setState(()=>({
+      style: {
+        display:'block',
+        fontSize: '30px', 
+        margin:'0 15px 0 0',
+        color: 'white',
+        transition: 'margin .5s',
+      }
+    }))
+  }
+
+  handleClick(){
+    const wrapper = this.wrapperRef.current;
+    wrapper.classList.toggle('is-nav-open')
+  }
   render(){
     return(
       <Fragment>
       <Header>
         <Sociallink>
-          <a href="https://www.instagram.com/warhammerofficial/" target="_blank">
+          <a href="https://www.instagram.com/warhammerofficial/" target="blank">
           <Socialicon src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1200px-Instagram_logo_2016.svg.png" href="https://www.w3schools.com"/>
           </a>
-          <a href="https://twitter.com/warhammer_art" target="_blank">
+          <a href="https://twitter.com/warhammer_art" target="blank">
           <Socialicon src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Twitter-512.png"/>
           </a>
         </Sociallink>

@@ -41,6 +41,7 @@ export const Navlink = styled.div`
     right: 20px;
     background-color: transparent;
     transform:translate(0%, -50%);
+    z-index: 101;
 `
 
 export const Navbar = styled.div`
@@ -54,6 +55,7 @@ export const Navbar = styled.div`
         position: fixed;
         transition: margin .5s;
         margin: 0 -200px 0 0;
+        z-index: 99;
     }
     .Nav1.is-nav-open {
         margin-right:0
