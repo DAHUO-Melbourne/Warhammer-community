@@ -12,7 +12,7 @@ class Details extends Component{
         <H1>{this.props.location.query.title}</H1>
         <div>{this.props.location.query.content}</div>
         <iframe width="560" height="315" src={this.props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <form name="contact" data-netlify="true" action="POST">
+        <form name="contact" data-netlify="true" netlify action="POST">
           <p>
             <label>Your Name: <input type="text" name="name" /></label>   
           </p>
