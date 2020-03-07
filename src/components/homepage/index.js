@@ -18,7 +18,7 @@ class Homepage extends Component{
         <Carousel.Caption>
           <h3>Welcome to War Hammer World!</h3>
           <p>Ah mighty Sigmar, saviour of the Empire, give me strength!</p>
-          <Link to={{pathname:'/details', query:{title:'Good', content:'Better and better+++111', src:'https://www.youtube.com/embed/g3CmxjTFv_Y'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
+          <Link to={{pathname:'/details', query:{title:'Empire', content:'Ah mighty Sigmar, saviour of the Empire, give me strength', src:'https://www.youtube.com/embed/7i4d3ignBNQ'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -30,7 +30,7 @@ class Homepage extends Component{
         <Carousel.Caption>
           <h3>High Elves</h3>
           <p>We are the chosen of Asuryan, beloved of the gods and heirs to the world. </p>
-          <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
+          <Link to={{pathname:'/details', query:{title:'High Elves', content:'Son my Asur', src:'https://www.youtube.com/embed/D56CckqlsB4'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
         </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
