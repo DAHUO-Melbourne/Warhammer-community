@@ -1,8 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import {H1} from './style';
-import NetlifyForm from 'react-netlify-form'
 
 function Details(props){
+  /*
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+  */
     return(
       <Fragment>
         <H1>{props.location.query.title}</H1>
@@ -26,5 +31,15 @@ function Details(props){
       </Fragment>
     )
 }
+/*
+如果用class component的话，那么就可以用
+constructor(proos){
+  supor(props)
+  this.state={}
+}
+来让子组件在接受父组件的props的同时，也有自己创立的state。但是如果你用functional components的话就没有自己的states了
+所以functional components is stateless.
+为了给functional components引入state，于是有了hook
+*/
 
 export default Details;
