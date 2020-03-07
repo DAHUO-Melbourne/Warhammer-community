@@ -2,17 +2,12 @@ import React, { Component, Fragment } from 'react';
 import {H1} from './style';
 import NetlifyForm from 'react-netlify-form'
 
-class Details extends Component{
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props){
-    super(props);
-  }
-  render(){
+function Details(props){
     return(
       <Fragment>
-        <H1>{this.props.location.query.title}</H1>
-        <div>{this.props.location.query.content}</div>
-        <iframe width="560" height="315" src={this.props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <H1>{props.location.query.title}</H1>
+        <div>{props.location.query.content}</div>
+        <iframe width="560" height="315" src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <form name="contact" method="post">
           <input type="hidden" name="form-name" value="contact" />
           <p>
@@ -30,7 +25,6 @@ class Details extends Component{
         </form>,
       </Fragment>
     )
-  }
 }
 
 export default Details;
