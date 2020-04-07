@@ -12,28 +12,28 @@ function Details(props){
   */
     return(
       <Fragment>
-        <div style={{top:'150px', position:'relative', margin: 'auto'}}>
-        <H1>{props.location.query.title}</H1>
-        <div style={{margin: 'auto', textAlign:'center'}}>{props.location.query.content}</div>
-        <div style={{textAlign:'center'}}>
-        <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <form name="contact" method="post" style={{margin:'auto', display:'block'}}>
-          <input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>Your Name: <input type="text" name="name"/></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"/></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message"></textarea></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-        </div>
-        </div>
+        <div style={{top:'200px', position:'relative', margin: 'auto'}}>
+          <H1>{props.location.query.title}</H1>
+          <div style={{margin: '50px auto 50px auto', textAlign:'center'}}>{props.location.query.content}</div>
+          <div style={{textAlign:'center'}}>
+            <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+              <form name="contact" method="post" style={{margin:'50px auto', display:'block'}}>
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                  <label>Your Name: <input type="text" name="name"/></label>
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email"/></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </div>
+          </div>
       </Fragment>
     )
 }

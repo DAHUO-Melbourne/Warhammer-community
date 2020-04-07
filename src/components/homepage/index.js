@@ -42,7 +42,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Lizardmen</h3>
             <p>Before Elves, before Dwarfs, before Men, the Old Ones arrived upon this world. Then came Chaos and the Great Plan of the Old Ones was unmade. We are the last of their servants, and only by our hand shall the Great Plan be restored, with the total defeat of the usurping younger races.</p>
-            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
+            <Link to={{pathname:'/details', query:{title:'Lizardmen', content:'First born of ancient one', src:'https://www.youtube.com/embed/g3CmxjTFv_Y'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -54,7 +54,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Dark Elves</h3>
             <p>If they shall not bow to me, the rightful ruler of Ulthuan, then I shall see each tower crumble and every soul scourged in pain until they beg for my rule.</p>
-            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
+            <Link to={{pathname:'/details', query:{title:'Dark Elves', content:'Son of Kein', src:'https://www.youtube.com/embed/zB6FaGBz0Lo'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -66,7 +66,7 @@ class Homepage extends Component{
           <Carousel.Caption>
             <h3>Skavens</h3>
             <p>All decent folk find the common rat repulsive. Harbinger of disease, it scavenges on our waste-heaps and frightens our children. How immeasurably worse then is the foul Skaven - standing on its hindlegs in foul parody of a human. Rats as tall as man, and blessed with the most vile intellect and cunning. They are the dark side of our souls, come to destroy us for our sins.</p>
-            <Link to={'/details'}><Redirectbutton>Click to join us</Redirectbutton></Link>
+            <Link to={{pathname:'/details', query:{title:'Skavens', content:'World Die Die!', src:'https://www.youtube.com/embed/k8EQ1KNkpmw'}}}><Redirectbutton>Click to join us</Redirectbutton></Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
