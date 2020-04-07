@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import {H1} from './style';
 
 function Details(props){
+  window.scrollTo(0,0)
   /*
   const [count, setCount] = useState(0);
   useEffect(() => {
