@@ -72,4 +72,5 @@ export const Redirectbutton = styled.button`
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 30px;
+  outline: none;
 `

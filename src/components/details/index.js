@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { Fragment, useState, useEffect } from 'react';
 import {H1} from './style';
 
@@ -10,10 +11,12 @@ function Details(props){
   */
     return(
       <Fragment>
+        <div style={{top:'150px', position:'relative', margin: 'auto'}}>
         <H1>{props.location.query.title}</H1>
-        <div>{props.location.query.content}</div>
-        <iframe width="560" height="315" src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <form name="contact" method="post">
+        <div style={{margin: 'auto', textAlign:'center'}}>{props.location.query.content}</div>
+        <div style={{textAlign:'center'}}>
+        <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <form name="contact" method="post" style={{margin:'auto', display:'block'}}>
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
@@ -27,7 +30,9 @@ function Details(props){
           <p>
             <button type="submit">Send</button>
           </p>
-        </form>,
+        </form>
+        </div>
+        </div>
       </Fragment>
     )
 }
