@@ -1,20 +1,15 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import {H1} from './style';
 
 function Details(props){
   window.scrollTo(0,0)
-  /*
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
-  */
     return(
       <Fragment>
-        <div style={{top:'200px', position:'relative', margin: 'auto'}}>
+        <div style={{backgroundColor:'#fffbf6'}}>
+        <div style={{top:'200px', position:'relative', margin: 'auto', backgroundColor:'#fffbf6'}}>
           <H1>{props.location.query.title}</H1>
-          <div style={{margin: '50px auto 50px auto', textAlign:'center'}}>{props.location.query.content}</div>
+          <div style={{margin: '50px auto 50px auto', textAlign:'justify', width:'50%'}} dangerouslySetInnerHTML={{ __html:props.location.query.content }}></div>
           <div style={{textAlign:'center'}}>
             <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
               <form name="contact" method="post" style={{margin:'50px auto', display:'block'}}>
@@ -33,6 +28,7 @@ function Details(props){
                 </p>
               </form>
             </div>
+          </div>
           </div>
       </Fragment>
     )
