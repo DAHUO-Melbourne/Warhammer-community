@@ -4,14 +4,22 @@ import {H1} from './style';
 
 function Details(props){
   window.scrollTo(0,0)
+  if(props.location.query!==undefined){
+    sessionStorage.setItem('title', props.location.query.title);
+    sessionStorage.setItem('content', props.location.query.content);
+    sessionStorage.setItem('src', props.location.query.src);
+  }
+  let title = sessionStorage.getItem('title')?sessionStorage.getItem('title'):'';
+  let content = sessionStorage.getItem('content')?sessionStorage.getItem('content'):'';
+  let src = sessionStorage.getItem('src')?sessionStorage.getItem('src'):'';
     return(
       <Fragment>
         <div style={{backgroundColor:'#fffbf6'}}>
         <div style={{top:'200px', position:'relative', margin: 'auto', backgroundColor:'#fffbf6'}}>
-          <H1>{props.location.query.title}</H1>
-          <div style={{margin: '50px auto 50px auto', textAlign:'justify', width:'50%'}} dangerouslySetInnerHTML={{ __html:props.location.query.content }}></div>
+          <H1>{title}</H1>
+          <div style={{margin: '50px auto 50px auto', textAlign:'justify', width:'50%'}} dangerouslySetInnerHTML={{ __html:content }}></div>
           <div style={{textAlign:'center'}}>
-            <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+            <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
               <form name="contact" method="post" style={{margin:'50px auto', display:'block'}}>
                 <input type="hidden" name="form-name" value="contact" style={{width:'50%'}}/>
                 <p>

@@ -10,7 +10,7 @@ class App extends Component {
       <BrowserRouter> 
         <Heading />
         <Route path='/' exact component={Homepage}></Route>
-        <Route path='/details' exact component={Details}></Route>
+        <Route path='/details' exact component={props=><Details {...props}/>}></Route>
       </BrowserRouter>
     </div>
   );
