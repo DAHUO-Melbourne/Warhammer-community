@@ -13,18 +13,18 @@ function Details(props){
           <div style={{textAlign:'center'}}>
             <iframe width="560" height="315" align='middle' style={{margin:'auto'}} src={props.location.query.src} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
               <form name="contact" method="post" style={{margin:'50px auto', display:'block'}}>
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="contact" style={{width:'50%'}}/>
                 <p>
-                  <label>Your Name: <input type="text" name="name"/></label>
+                  <input type="text" name="name" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Your name'/>
                 </p>
                 <p>
-                  <label>Your Email: <input type="email" name="email"/></label>
+                  <input type="email" name="email" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Your email address'/>
                 </p>
                 <p>
-                  <label>Message: <textarea name="message"></textarea></label>
+                  <textarea name="message" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Please leave your message'></textarea>
                 </p>
                 <p>
-                  <button type="submit">Send</button>
+                  <button type="submit" style={{width:'35%', backgroundColor: '#00a8e0', border:'none', color: '#fff'}}>Send</button>
                 </p>
               </form>
             </div>
