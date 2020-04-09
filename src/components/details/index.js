@@ -23,13 +23,13 @@ function Details(props){
               <form name="contact" method="post" style={{margin:'50px auto', display:'block'}}>
                 <input type="hidden" name="form-name" value="contact" style={{width:'50%'}}/>
                 <p>
-                  <input type="text" name="name" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Your name'/>
+                  <input type="text" name="name" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='  Your name'/>
                 </p>
                 <p>
-                  <input type="email" name="email" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Your email address'/>
+                  <input type="email" name="email" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='  Your email address'/>
                 </p>
                 <p>
-                  <textarea name="message" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='Please leave your message'></textarea>
+                  <textarea name="message" style={{width:'35%', borderRadius:'20px', border:'none', outline:'none'}} placeholder='  Please leave your message'></textarea>
                 </p>
                 <p>
                   <button type="submit" style={{width:'35%', backgroundColor: '#00a8e0', border:'none', color: '#fff'}}>Send</button>

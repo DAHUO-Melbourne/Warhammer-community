@@ -61,7 +61,7 @@ class Heading extends Component{
           <Socialicon src="https://cdn4.iconfinder.com/data/icons/social-media-flat-7/64/Social-media_Twitter-512.png"/>
           </a>
         </Sociallink>
-        <LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" />
+        <a href='https://warhammer-community.netlify.com'><LogoImage src="https://content.totalwar.com/total-war/com.totalwar.www2019/uploads/2017/07/24103739/TWW2_RGB_logo_optz-300x130.png" /></a>
         <Navlink>
           <IconFont type='icon-daohang' style={this.state.style} onClick={this.handleClick.bind(this)} />
         </Navlink>
