@@ -12,37 +12,13 @@ class Heading extends Component{
         display:'block',
         fontSize: '30px', 
         margin:'0 15px 0 0',
-        color: 'white',
+        color: '#a9a9a9',
         transition: 'margin .5s',
+        outline: 'none',
       },
       click:false
     }
   }
-/*
-  handleMouseEnter(){
-    this.setState(()=>({
-      style: {
-        display:'block',
-        fontSize: '30px', 
-        margin:'0 15px 0 0',
-        color: 'blue',
-        transition: 'margin .5s',
-      }
-    }))
-  }
-
-  handleMouseLeave(){
-    this.setState(()=>({
-      style: {
-        display:'block',
-        fontSize: '30px', 
-        margin:'0 15px 0 0',
-        color: 'white',
-        transition: 'margin .5s',
-      }
-    }))
-  }
-*/
   handleClick(){
     const wrapper = this.wrapperRef.current;
     wrapper.classList.toggle('is-nav-open')
@@ -52,8 +28,9 @@ class Heading extends Component{
           display:'block',
           fontSize: '30px', 
           margin:'0 215px 0 0',
-          color: 'white',
+          color: '#a9a9a9',
           transition: 'margin .5s',
+          outline: 'none',
         },
         click: true
       }))
@@ -64,8 +41,9 @@ class Heading extends Component{
           display:'block',
           fontSize: '30px', 
           margin:'0 15px 0 0',
-          color: 'white',
+          color: '#a9a9a9',
           transition: 'margin .5s',
+          outline: 'none',
         },
         click: false
       }))
